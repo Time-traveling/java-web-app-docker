@@ -7,14 +7,14 @@ services:
     - 9000:8080
     networks:
     - mavenwebapp
-	deploy
-	 replicas: 2
-	 update_config:
-	  parallelism: 1
-	  delay: 30s
-	 placement:
-	  constraints:
-	  - "node.role==worker"
+       deploy
+	replicas: 2
+	update_config:
+	 parallelism: 1
+	 delay: 30s
+	placement:
+	 constraints:
+	 - "node.role==worker"
 networks:
   mavenwebapp:
   
